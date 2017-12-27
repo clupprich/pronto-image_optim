@@ -4,7 +4,7 @@ require 'pronto/image_optim/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'pronto-image_optim'
-  spec.version       = Pronto::ImageOptim::VERSION
+  spec.version       = Pronto::ImageOptimVersion::VERSION
   spec.authors       = ['Christoph Lupprich']
   spec.email         = ['christoph@luppri.ch']
 
@@ -24,6 +24,10 @@ Gem::Specification.new do |spec|
     f.match(%r{^(test|spec|features)/})
   end
   spec.require_paths = ['lib']
+
+  spec.add_runtime_dependency('pronto', '~> 0.9.0')
+  spec.add_runtime_dependency('image_optim')
+  spec.add_runtime_dependency('image_optim_pack')
 
   spec.add_development_dependency 'bundler', '~> 1.16'
   spec.add_development_dependency 'rake', '~> 10.0'
